@@ -1,0 +1,62 @@
+:root {
+    --n : 4;
+}
+body {
+  background-color:	#09adbc;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+ul li a {
+  --c: #DAA520;
+  position: relative;
+  width: 12em;
+  height: 3em;
+  color: var(--c);
+  font-size: 16px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.5em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  overflow: hidden;
+  line-height: 3em;
+  float: left;
+  text-decoration: none;
+  margin: 1em;
+  z-index: 1;
+  transition: 0.5s;
+  background-color: #111;
+}
+ul li span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #DAA520;
+  transform: translateY(150%);
+  border-radius: 50%;
+  z-index: -1;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 1s;
+  transition-delay: calc((var(--n)-1) * 0.1s);
+}
+ul li a:hover {
+    color: black;
+}
+ul li a:hover span {
+    transform: translateY(0) scale(2);
+}
+ul li a span:nth-child(1) {
+    --n: 1;
+}
+ul li a span:nth-child(2) {
+    --n : 2;
+}
+ul li a span:nth-child(3) {
+    --n: 3;
+}
